@@ -1,35 +1,23 @@
-<div class="shadow-sm bg-dark">
-    <nav class="navbar navbar-expand-md">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand text-light" href="https://github.com/wholaraib" target="_blank" class="a-green surname">_MOHAMMAD LARAIB</a>
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a routerLink="/home" routerLinkActive="text-light" class="nav-link text-secondary a-green">
-                        <span class="nav-number">01.</span> Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a routerLink="/about" routerLinkActive="text-light" class="nav-link text-secondary a-green">
-                        <span class="nav-number">02.</span> About
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a routerLink="/education" routerLinkActive="text-light" class="nav-link text-secondary a-green">
-                        <span class="nav-number">03.</span> Education
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a routerLink="/projects" routerLinkActive="text-light" class="nav-link text-secondary a-green">
-                        <span class="nav-number">04.</span> Projects
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a routerLink="/contact" routerLinkActive="text-light" class="nav-link text-secondary a-green">
-                <span class="nav-number">05.</span> Contact
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<div class="navbar">
+  <div
+    class="nav-heading hover-underline"
+    routerLink="/home"
+    routerLinkActive="active"
+  >
+    <i class="fa-sharp-duotone fa-solid fa-l" style="color: #e55050"></i>ara<span style="color: #60B5FF;">i</span>b.
+  </div>
+  <div class="nav-menu">
+    <a class="nav-item" routerLink="/home" routerLinkActive="active"
+      >&lt;Home&gt;</a
+    >
+    <a class="nav-item" routerLink="/about" routerLinkActive="active"
+      >&lt;About&gt;</a
+    >
+    <a class="nav-item" routerLink="/projects" routerLinkActive="active"
+      >&lt;Projects&gt;</a
+    >
+    <a class="nav-item" routerLink="/contact" routerLinkActive="active"
+      >&lt;Contact&gt;</a
+    >
+  </div>
 </div>
-<router-outlet></router-outlet>

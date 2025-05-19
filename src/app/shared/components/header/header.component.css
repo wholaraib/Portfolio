@@ -1,47 +1,115 @@
-/* @import '../../styles.css'; */
-@import '../../../../styles.css';
 .navbar {
-    background-color: #27333f;
+  position: relative; /* Needed for absolute positioning inside */
+  background-color: #000;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  
 }
 
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-menu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
 }
 
-.navbar-brand {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: #f8f9fa;
+
+.nav-heading {
+  font-size: 30px;
+  font-weight: 600;
+  color: #C9E6F0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
 }
 
-.nav-link {
-    color: #adb5bd;
-    cursor: pointer;
+
+.hover-underline {
+  font-size: 2rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: #f8f9fa;
+.hover-underline::after,
+.hover-underline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #e55050, #4ED7F1);
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
 }
 
-.nav-number {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    color: #f8f9fa;
-    margin-right: 5px;
+.hover-underline::before {
+  top: -5px;
+  transform-origin: left;
 }
 
-.shadow-sm {
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
+.nav-item {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.5s;
+  z-index: 1;
+  cursor: pointer;
 }
 
-.bg-dark {
-    background-color: hsl(212, 26%, 14%) !important;
+.nav-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
 }
 
-.surname {
-    font-size: 20px;
-    font-weight: bold;
+.nav-item::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: scaleY(0);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
 }
+
+.nav-item:hover {
+  color: #000;
+}
+
+.nav-item:hover::before,
+.nav-item:hover::after {
+  transform: scaleY(1);
+  opacity: 1;
+}
+

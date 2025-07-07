@@ -27,7 +27,7 @@
 }
 
 .footer-link {
-  color: #fff;
+  color: #adb5bd;
   font-size: 20px;
   transition: color 0.3s ease;
   position: relative;
@@ -47,7 +47,7 @@
 }
 
 .footer-link:hover {
-  color: #C9E6F0;
+  color: #fff;
 }
 
 .footer-link:hover::after {

@@ -1,5 +1,153 @@
-p{
-  height: 100vh;
-  background-color: whitesmoke;
-  
+
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 2rem;
+  background-color: #141a20;
+  min-height: 100vh;
+}
+
+.content-container {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.intro-text {
+  text-align: left;
+  padding: 2rem;
+}
+
+.home-title {
+  font-size: 4.5rem;
+  color: #e0f0ff;
+  margin-bottom: 3rem;
+  line-height: 1.2;
+}
+
+.home-author {
+  font-size: 2.8rem;
+  color: #b0caf0a4;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+#dynamic-text {
+  border-right: 2px solid #00FF00;
+  padding-right: 5px;
+  animation: blink-caret 0.7s step-end infinite;
+  color: #00FF00;
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00FF00;
+  }
+}
+
+.home-bio {
+  font-size: 1.2rem;
+  color: #a9b9cc;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+/* .btn-portfolio {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 2px solid #00FF00;
+  color: #00FF00;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+.btn-portfolio:hover {
+  background-color: #00FF00;
+  color: #141a20;
+} */
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.8rem !important;
+    text-align: center;
+  }
+
+  .home-author {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  .home-bio {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .intro-text {
+    padding: 1rem;
+  }
+
+  /* .btn-portfolio {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  } */
+
+  .hide-on-large {
+    display: none;
+  }
+}
+
+.btn-portfolio {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border: 2px solid #00FF00;
+  background-color: transparent;
+  color: #00FF00;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-portfolio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #00FF00;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.btn-portfolio:hover::before {
+  left: 0;
+}
+
+.btn-portfolio:hover {
+  color: #141a20;
+  box-shadow: 0 0 10px #00ff00b5, 0 0 20px #00ff00b5;
+}
+
+.btn-portfolio .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-portfolio:hover .arrow {
+  transform: translateX(5px);
 }

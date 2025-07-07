@@ -10,4 +10,8 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent {
 
+  onNameClick() {
+      window.open('https://www.linkedin.com/in/mohammad-laraib-58468a1b8/', '_blank');
+  }
+
 }

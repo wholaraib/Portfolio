@@ -1,23 +1,33 @@
 <div class="navbar">
-  <div
-    class="nav-heading hover-underline"
-    routerLink="/home"
-    routerLinkActive="active"
-  >
-    <i class="fa-sharp-duotone fa-solid fa-l" style="color: #e55050"></i>ara<span style="color: #60B5FF;">i</span>b.
-  </div>
-  <div class="nav-menu">
-    <a class="nav-item" routerLink="/home" routerLinkActive="active"
-      >&lt;Home&gt;</a
-    >
-    <a class="nav-item" routerLink="/about" routerLinkActive="active"
-      >&lt;About&gt;</a
-    >
-    <a class="nav-item" routerLink="/projects" routerLinkActive="active"
-      >&lt;Projects&gt;</a
-    >
-    <a class="nav-item" routerLink="/contact" routerLinkActive="active"
-      >&lt;Contact&gt;</a
-    >
-  </div>
+<div
+  class="nav-heading hover-underline"
+  routerLink="/home"
+  routerLinkActive="active"
+  (click)="onNameClick()"
+>
+  <span>_</span>
+  <span>L</span>
+  <span>A</span>
+  <span>R</span>
+  <span>A</span>
+  <span>I</span>
+  <span>B</span>
+</div>
+
+
+<div class="nav-menu">
+  <a class="nav-item" routerLink="/home" routerLinkActive="active">
+    <span class="bracket">&lt;</span>Home<span class="bracket">&gt;</span>
+  </a>
+  <a class="nav-item" routerLink="/about" routerLinkActive="active">
+    <span class="bracket">&lt;</span>About<span class="bracket">&gt;</span>
+  </a>
+  <a class="nav-item" routerLink="/projects" routerLinkActive="active">
+    <span class="bracket">&lt;</span>Projects<span class="bracket">&gt;</span>
+  </a>
+  <a class="nav-item" routerLink="/contact" routerLinkActive="active">
+    <span class="bracket">&lt;</span>Contact<span class="bracket">&gt;</span>
+  </a>
+</div>
+
 </div>

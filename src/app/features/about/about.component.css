@@ -1,3 +1,139 @@
-p{
-    height: 100vh;
+.about-container {
+  padding: 80px 30px;
+  background-color: #141a20;
+  color: #e0f0ff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.about-content {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.about-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #00ff00;
+}
+
+.highlight {
+  color: #00FF00;
+}
+
+.about-intro p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  margin-bottom: 20px;
+  color: #adb5bd;
+}
+
+.skills-section {
+  margin-top: 60px;
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skills-grid span {
+  background-color: #27333f;
+  border: 1px solid #00FF00;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: #00FF00;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.timeline-section {
+  margin-top: 60px;
+}
+
+.timeline-section h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-item {
+  background-color: #1e2733;
+  border-left: 4px solid #00FF00;
+  padding: 20px 25px;
+  border-radius: 4px;
+}
+
+.timeline-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #00FF00;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #adb5bd;
+  font-size: 1rem;
+}
+
+.personal-note {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.personal-note blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #8c98a3;
+  border-left: 4px solid #00FF00;
+  padding-left: 20px;
+}
+
+.leetcode-stats,
+.github-stats {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.leetcode-card,
+.calendar {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 8px;
+  background-color: #1e2733;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+  overflow-x: auto;
+}
+
+.profile-picture-wrapper {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-picture {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00FF00;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
 }

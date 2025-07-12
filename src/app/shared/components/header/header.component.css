@@ -6,7 +6,7 @@
   height: 70px;
   display: flex;
   align-items: center;
-  padding: 0 20px; /* optional spacing */
+  padding: 0 20px;
 }
 
 .bracket {
@@ -40,7 +40,6 @@
   padding-bottom: 8px;
 }
 
-/* underline animation */
 .hover-underline::after {
   content: '';
   position: absolute;
@@ -57,14 +56,12 @@
   transform: scaleX(1);
 }
 
-/* base span styling */
 .hover-underline span {
   display: inline-block;
   transition: color 0.3s ease-out;
   color: inherit;
 }
 
-/* staggered delays */
 .hover-underline span:nth-child(1) { transition-delay: 0s;    }
 .hover-underline span:nth-child(2) { transition-delay: 0.1s;  }
 .hover-underline span:nth-child(3) { transition-delay: 0.2s;  }
@@ -73,12 +70,9 @@
 .hover-underline span:nth-child(6) { transition-delay: 0.5s;  }
 .hover-underline span:nth-child(7) { transition-delay: 0.6s;  }
 
-/* on hover, letters turn green in sequence */
 .hover-underline:hover span {
   color: #00FF00;
 }
-
-
 
 .nav-item {
   position: relative;
@@ -95,45 +89,39 @@
   cursor: pointer;
 }
 
-.nav-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-top: 2px solid #00FF00;
-  border-bottom: 2px solid #00FF00;
-  transform: scaleY(2);
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.nav-item::after {
-  content: '';
-  position: absolute;
-  top: 2px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #00FF00;
-  transform: scaleY(0);
-  opacity: 0;
-  transition: 0.3s;
-  z-index: -1;
-}
-
 .nav-item:hover {
-  color: #000;
+  color: #fff;
 }
 
 .nav-item:hover .bracket {
-  color: #000; 
+  color: #fff; 
 }
 
-.nav-item:hover::before,
-.nav-item:hover::after {
-  transform: scaleY(1);
-  opacity: 1;
-}
 
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav-heading {
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .nav-menu {
+    margin: 20px 0 0;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .nav-item {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+}

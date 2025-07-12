@@ -1,10 +1,11 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { AccordionComponent } from "../../shared/components/accordion/accordion.component";
 declare const GitHubCalendar: any;
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [],
+  imports: [AccordionComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })

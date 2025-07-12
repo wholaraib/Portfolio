@@ -7,7 +7,7 @@
 }
 .contact-card {
   transform: scale(0.75);
-  transform-origin: top center; /* Keeps it aligned from the top center */
+  transform-origin: top center; 
 }
 
 .contact-card {
